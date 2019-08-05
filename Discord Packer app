@@ -1,0 +1,8 @@
+This app for android will have a share file hook for image files
+When an image is shared it will take the image and down sample/compress/scale the image until is is under 8mb and automatically share with the discord app
+Add settings for max compression, min size (width and height) and an option to use discord nitro file limit instead of base limit
+Also add manual crop option if compression not possible
+Preferably add support for mp4/gif files as well
+
+Usefull links:
+https://developer.android.com/training/secure-file-sharing

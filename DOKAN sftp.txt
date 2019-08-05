@@ -1,0 +1,9 @@
+Impliment SFTP/SCP/FTP for windows via dokan library or similar FUSE system
+must access linux file servers
+Mount said as virtual drive
+once mounted windows explorer should see it as a standard folder
+Dito for ex4 formatted drives (possibly sepperate program?)
+100% replacement for winSCP
+
+Usefull Links
+https://dokan-dev.github.io/

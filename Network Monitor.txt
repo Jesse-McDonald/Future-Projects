@@ -1,0 +1,3 @@
+Make windows driver and android app pair that will create a virtual monitor on windows then stream the contents to the android device over usb/network
+also make a windows/web receiver just in case
+when connected to android, touch is sent back as touch data to windows with option to send as mouse data instead

@@ -1,0 +1,63 @@
+A windows/linux program (ok, macOS if you can, but I dont care) that creates a file representing a virtual "folder" (vault) of encrypted data
+! marks important features
+Preferably this vault will have the following properties
+!1. The file table is encrypted so without the key it is not possible to know the names, sizes, or location of any of the files
+!2. Each file can be individualy read without decrypting anything except the file and the file table
+3. New files can be added without needing to refactor the file order
+4. Large Files can be stored within the vault
+Preferably it would be a standard uncompressed zip or tar file of some sort
+Preferably the vault should be readable without the program if you have the key (linux aes pipe esk thing)
+Option to dissable external readablilty (custom key salt?)
+!The program should support atleast AES 128, and 256, preferably a custom 512 aswell
+!The program should have a key hash generator from plane text hash code with user selectable hash algorithem (only the secure ones)
+!Option to export/use external aes key
+!block cipher to prevent identical blocks, however, vault must be mostly recoverable with minor block loss
+
+!The program will mount the vault as a virtual drive using FUSE (or similar (DOKAN)) so that linux/windows file explorers see it as a standard file
+!Files will not exist in an unencrypted state out side of ram (no tmp files)
+User has unencrypt button to dump contents of vault to unencrypted file
+!Passphrase required every power cycle
+Preferably option to store vault inside its own executable (if no go have extractable executable creator that bundles the executable with the vault in an extractor executable)
+Option to lock vault on time out
+Option to lock vault on log out
+Button to lock Vault emediatly
+Option to lock vault with external drive/key/whatever
+Option to add additional unlock methods (fingerprint?)
+Option to add backup recovery key (and warning about security)
+Option to add online recovery key (and warning about data seasure requests)
+Add option for High complexity key recovery (some sort of proccess that will take a week) (also warn about security)
+Add clone detection and protection 
+(add spofing notice)
+(base this on hardware id of hard drive, mobo, cpu, network cards, etc and maybe also hard drive location and userid)
+Intense local blockchain based audit log (especily for unencrypting a file)
+audit log encrypted 
+used modified key so you can only read/write the log with the key and the program key
+Drive kill option (on nth attempt/bad hardware id wanacry/secure erase the drive/file and to attempt rowhammer/HCF/rootkit/shutdown the system to bring it down)
+Drive Location detection (on bad key/hardware report network and public ip to our servers for data theft tracking)
+Add silence option to above where key works normaly in bad hardware, but we mark the drive/system with watermark for data recovery analsyt to find
+Add network ping unlock requirement (the file must ping a server and get specific certif or no unlocky)(prevents firewall to block Location detection)
+
+
+Version 1.1
+Recovery drive option
+Drive that can not be used without base file
+Allows for recovery of bad blocks in base file
+Contains no recoverable data even with encryption key unless base file exists
+
+Version 2.0
+Non symetric multi user file system that allows each user to have a unique key (rsa perhapse) and file access permissions to be set on a key by key basis for each file
+
+Physical drive
+hardware drive capable of destroying self and system on bad key
+usb kill style
+duno probiably same for sata
+triggered by internal cpu
+acceleromiter lock
+uique hardware key on self destructing hardware
+created on first boot based on something we cant controle (persistant flash with quantum random?)
+Quantum random module (transistor overdrive)
+
+Usefull links 
+https://dokan-dev.github.io/
+https://www.quora.com/Would-it-be-possible-to-create-a-piece-of-software-that-would-destroy-the-computer-running-it-i-e-complete-hardware-destruction-via-software
+https://usbkill.com/

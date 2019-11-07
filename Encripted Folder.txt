@@ -1,3 +1,7 @@
+Existing Open Souce projected located that does this
+https://github.com/jetwhiz/encfs4win
+
+
 A windows/linux program (ok, macOS if you can, but I dont care) that creates a file representing a virtual "folder" (vault) of encrypted data
 ! marks important features
 Preferably this vault will have the following properties

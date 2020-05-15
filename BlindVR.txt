@@ -1,0 +1,3 @@
+Horror game focused arround your character being blind/in the dark
+its vr, but you can not see at all (unless you strike a match)
+you have to navegate by "feeling" the walls and hearing the monsters

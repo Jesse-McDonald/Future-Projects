@@ -1,0 +1,5 @@
+A vr/3rd person game based arround 1 minute of this video starting at 7:45
+https://youtu.be/qC5KtatMcUw?t=466 
+You can fly/glide, but you have a limited meter to do so with
+landing on a surface recharges that meter, and if you jump with a full meter you get a serious jump boost
+Sliding charges the meter faster than running, but you must have enough speed to use it

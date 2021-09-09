@@ -1,0 +1,16 @@
+Goal
+USPI is a project to create a device that can act as both a USB client and a USB host at the same time.  Not on the same port obviously.
+The purpose is so that someone can connect a usb device to one side and write a program to programicaly modify the usb signal before acting as a device.
+Obviously this scope is quite large so the specific use case is to make a device that a HID device can be attatched to (Steam controller specificaly) and programicaly create a USB HID device (Ie. regular xbox controller) before exporting to a computer
+This should allow for complex controller remappings far beyond valves limited scope including such wonderfull things as using the touch pads as both joysticks and 8 way d-pads at the same time
+(Map, x/y to joystick, clicks at the edge to d-pad, clicks in center to joystick clicks)
+
+Current Plan
+Use 2 Raspbery Pi 0's, (well ok, 1 raspbery pi 0, 1 raspbery pi 0 w)
+The 0 is configured to run as usb host and controller is pluged directly in.  A usb hub and usb-ethernet adapter is used to ssh into this device
+Use USBIP http://usbip.sourceforge.net/ to forward the USBs connected (or just the first HID?) over a virtual ethernet port using the PI0's serial0 bus
+The 0w is configred to run as USB client and recives controller input via usbIP over serial0 bus.  Ssh into this device via onboard wifi.
+The 0w then translates then reads the controller inputs and creates a USB output based on an internal script
+
+Stall
+Awaiting ethernet cable to connect PI with (Hopefully Friday)

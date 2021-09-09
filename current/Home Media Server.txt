@@ -1,0 +1,13 @@
+Basicaly Plex but free and open.
+Allow 1 computer on a network to serve media similar to youtube, but localy.
+
+Planned Features
+support music/audiobooks/movies/tv
+ISO to MP4 converer via FFMPG
+Youtube proxy and casher via Youtube-dl
+3rd party meadia ripper via virtual browser
+Netflix/Disney + ripping via virtual browser and screen recorder
+Audible ripping via playback recording
+Idealy multi device caching, but currently it is just planned to be a webapp
+
+Stall: Not sure where to start

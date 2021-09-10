@@ -1,41 +1,42 @@
 C++ is great, but its not perfect.  I seek to improve on c++
 
-Features\
-  c++ basic syntax\
-  Java style class syntax (its all in class name{foo(){}} none of this name::foo(){} nonesense)\
-  only 1 type of sorce file, no h file (h files are generated compile time so even though we include doc.src, c++ compiler will get include doc.h and compile doc.cpp)\
-  circular includes auto resolve with forward define\
-  include guards automatic\
-  files automaticaly include own H file, function order does not matter.\
+Features
+  c++ basic syntax
+  Java style class syntax (its all in class name{foo(){}} none of this name::foo(){} nonesense)
+  only 1 type of sorce file, no h file (h files are generated compile time so even though we include doc.src, c++ compiler will get include doc.h and compile doc.cpp)
+  circular includes auto resolve with forward define
+  include guards automatic
+  files automaticaly include own H file, function order does not matter.
   compiler has run interprited mode
   
-  Pointers\
-    All heap allocated pointers use shared_ptr unless explicitly the user doesnt allow it\
-    local_ptr is a raw pointer for local use only.  Can not be return, can not be class level variables\
-    local_ptr is automaticaly used when conditions are met \
+  Pointers
+    All heap allocated pointers use shared_ptr unless explicitly the user doesnt allow it
+    local_ptr is a raw pointer for local use only.  Can not be return, can not be class level variables
+    local_ptr is automaticaly used when conditions are met 
 
-  Structs/classes\
-    multiple inheritance is definitly a thing (fix diamond problem by constructing single inheritance path at compile time)\
-    Add function injecting (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) \
-    Structs can no longer contain any non operator public functions\
-    Add operator for casts\
-    Read/Write of class variables individualy access controlled (ie public readable private writeable is totaly a thing (usefull for string.length), as is public writable private readable (usefull for rand.seed))\
+  Structs/classes
+    multiple inheritance is definitly a thing (fix diamond problem by constructing single inheritance path at compile time)
+    Add function injecting (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) 
+    Structs can no longer contain any non operator public functions
+    Add operator for casts
+    Read/Write of class variables individualy access controlled (ie public readable private writeable is totaly a thing (usefull for string.length), as is public writable private readable (usefull for rand.seed))
     
 
-  Data structures\
-    Array's track own length\
-    JSON added as type\
-    JSON type objects support JSON syntax (ie, none of this object.getInt("x") nonesense, object.x returns an appropriate type depending on caller expectation)\
-    Add Worker theads class\
-      an other thread can request a worker thread run a function\
-      Worker thread sleeps if no requests\
+  Data structures
+    Array's track own length
+    JSON added as type
+    JSON type objects support JSON syntax (ie, none of this object.getInt("x") nonesense, object.x returns an appropriate type depending on caller expectation)
+    Add Worker theads class
+      an other thread can request a worker thread run a function
+      Worker thread sleeps if no requests
     
 
 
-Plan\
-Transompile to c++ then hand off c++ to compiler.\
-Be cross platform be allowing compilation to different c++ compilers\
-(ie include Windows.h vs including unistd.h)\
-Full c++ library compatability via transcompiling to c++ then including library\
+Plan
+Transompile to c++ then hand off c++ to compiler.
+Be cross platform be allowing compilation to different c++ compilers
+(ie include Windows.h vs including unistd.h)
+Full c++ library compatability via transcompiling to c++ then including library
+
 
 Stall not sure where to start

@@ -1,13 +1,26 @@
 C++ is great, but its not perfect.  I seek to improve on c++
+This programming language will be a midpoint between c++ and java.  Still as powerfull as c++, but with a few of the comforts of java, while at the same time avoiding the most anoying "features" of both.
 
 Features
   c++ basic syntax
   Java style class syntax (its all in class name{foo(){}} none of this name::foo(){} nonesense)
-  only 1 type of sorce file, no h file (h files are generated compile time so even though we include doc.src, c++ compiler will get include doc.h and compile doc.cpp)
-  circular includes auto resolve with forward define
+  only 1 type of source file, no h file (h files are generated compile time so even though we include doc.src, c++ compiler will get include doc.h and compile doc.cpp)
+  circular includes auto resolve with forward define and automatic extern
   include guards automatic
   files automaticaly include own H file, function order does not matter.
   compiler has run interprited mode
+  special path $project for #includes, set at compile time with -p or set to cwd
+  special paths can be created with $files can be used in includes.  directories lower than $project are scanned, lables are avaliable on a shortest tree disance
+  --Lib specifies a directory to use for libraries.  It is linked as if it where at $libraries.  Libraries cannot refference $project paths. 
+  --Lib can contain o and h files for raw c++ code
+  compiler has -r flag to automaticaly follow includes building as neccessary
+  compiler ignores unchanged files unless dependencies have changed
+  compiler links -pthreads and other common libraries if needed
+  compiler has flag for build dir, otheriwse uses $project/build (puts h and c++ files in here in matching dir tree)
+  compiler has flag for bin dir otherwise uses  $project/bin (puts o files in here in matching dir tree)
+  -o flag for final executable location, otherwise a.out/a.exe
+  Names starting with $ are reserved
+  unpacking x,y=a,b into x=a;y=b; in order irrelevvent way.  If x,y=y,x or similar cache values for consistancy so swap occurs
   
   Pointers
     All heap allocated pointers use shared_ptr unless explicitly the user doesnt allow it
@@ -15,20 +28,48 @@ Features
     local_ptr is automaticaly used when conditions are met 
 
   Structs/classes
-    multiple inheritance is definitly a thing (fix diamond problem by constructing single inheritance path at compile time)
-    Add function injecting (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) 
+    multiple inheritance is definitly a thing 
+    Add function injecting (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) (not neccasaraly compatible with c++ libs)
     Structs can no longer contain any non operator public functions
     Add operator for casts
-    Read/Write of class variables individualy access controlled (ie public readable private writeable is totaly a thing (usefull for string.length), as is public writable private readable (usefull for rand.seed))
+    Read/Write of class variables individualy access controlled (ie public readable private writeable is totaly a thing (usefull for string.length))
+    add abstract keyword for pure virtual functions
+    allow "literal" operator to define an object literal.  Acts as constructor durring assignment/pass.  Invoked with {}, can be ordered list or property dictionary  
+    structs automaticaly create litteral operator with default objDefault if not specified
+    lambda classes allow overriding 1 virtual function at instanciation time.  implimented as child classes with narrow scope.
+    classes automaticaly become serializable when written.  Addresses are stored as instance names.  if an array of objects pointing to eachother are serialized and sent over a network, that array can automaticaly be reconstructed.
     
-
+    
+ 
   Data structures
     Array's track own length
+    Array, String, Variable sized array (internaly vector), and lists all use .length read only property for number of elements.  Also have .size read only property for allocated space.  WHen not applicable .size is same as .length
     JSON added as type
     JSON type objects support JSON syntax (ie, none of this object.getInt("x") nonesense, object.x returns an appropriate type depending on caller expectation)
     Add Worker theads class
       an other thread can request a worker thread run a function
-      Worker thread sleeps if no requests
+      Worker thread sleeps if no requests 
+    
+    Return class
+      (hidden from user)
+      Variable lenght Template
+      used for return of multiple objects
+      x,y=Return Type implicitly unpacks.
+      discard value on ,, or if not enough
+      allso supports .attribute and [i]
+    suspend/resume function.  By calling a suspend(Path) internaly objects are serialized to disk.  in the main file a resume(Path) function can be defined that will load the program from ram at that pint
+    (no prommises this works for external libraries)
+  Functions
+    Allow multiple return via Template Type class.
+    Allow automatic array conversion from [] args
+    allow python style named args
+    pass "default" keyword to arg to fill in its default arg (at compile time), fails if no default
+    Translate ... into [] instead of using c++'s weird.... thing?
+    Allow optional named return (type foo(args) : namedRet{) impliment as (type foo(args){type namedRet and convert return; to return namedRet;  automaticaly return namedRet at end of function if no ret branch possible)
+    
+  Templates
+    Duck Typing (duh)
+    
     
 
 

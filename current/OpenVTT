@@ -1,0 +1,18 @@
+an open source Virtual Table Top platform designed to be hosted by the DM.
+
+Features:
+  customizable player sheet forms
+  navigatable maps
+  map tokens
+  health bars
+  initiative tracker
+  dice roller
+  customizable dice modifiers
+  3 types of player vision, black (not yet seen), darkened(no tokesn, but map shows for area out side line of site) and normal for areas in view
+  dynamic lighting
+  configurable room based polygon lighting
+  multi layer maps
+  support for animated maps/tokens
+  support for animated spells
+  AOE templates
+  

@@ -1,7 +1,7 @@
 Impliment SFTP/SCP/FTP for windows via dokan library or similar FUSE system
 must access linux file servers
 Mount said as virtual drive
-once mounted windows explorer should see it as a standard folder
+once mounted windows explorer should see it as a standard folder and should be able to edit files in arbitrary programs
 Dito for ex4 formatted drives (possibly sepperate program?)
 100% replacement for winSCP
 

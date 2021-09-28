@@ -29,7 +29,7 @@ Features
 
   Structs/classes
     multiple inheritance is definitly a thing 
-    Add function injecting (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) (not neccasaraly compatible with c++ libs)
+    Add function injecting (visitor function) (I want std::String to have a .toMyClass function so as part of MyClass I inject a function into String (injected functions still have public access rights)) (probiably use old class:: stuff for this) (not neccasaraly compatible with c++ libs)
     Structs can no longer contain any non operator public functions
     Add operator for casts
     Read/Write of class variables individualy access controlled (ie public readable private writeable is totaly a thing (usefull for string.length))

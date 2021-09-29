@@ -40,8 +40,13 @@ Features
     classes automaticaly become serializable when written.  Addresses are stored as instance names.  if an array of objects pointing to eachother are serialized and sent over a network, that array can automaticaly be reconstructed.
     
   Flow controll
+    for(stuff){ and while(stuff){ work normaly, but for(stuff):name{ and while(stuff):name{ work, name cant start with a number
     break; breaks 1 loop
     break(n); breaks n loops
+    break(lable); breaks out of loop with name
+    skip; (continue) skips rest of itteration
+    skip (label); skips rest of named itteraion
+    break(label) and skip(label) must be used IN the named loop
  
   Data structures
     Array's track own length

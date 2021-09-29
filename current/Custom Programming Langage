@@ -39,7 +39,9 @@ Features
     lambda classes allow overriding 1 virtual function at instanciation time.  implimented as child classes with narrow scope.
     classes automaticaly become serializable when written.  Addresses are stored as instance names.  if an array of objects pointing to eachother are serialized and sent over a network, that array can automaticaly be reconstructed.
     
-    
+  Flow controll
+    break; breaks 1 loop
+    break(n); breaks n loops
  
   Data structures
     Array's track own length

@@ -77,7 +77,8 @@ Features
   Templates
     Duck Typing (duh)
     
-    
+  Debug    
+    add debug("msg") library to standard
 
 
 Plan

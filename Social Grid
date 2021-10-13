@@ -1,0 +1,16 @@
+A "new" "Social network"
+There are no individual feeds or pages.  At most you have a limited section of profile with picture, a bio, and a friends list (private friends list)\
+Everything else is a message thread tree\
+the system starts with 1 common message tree anyone* (*not bots, add some bot protections (on and limit to those with accounts)) can post to.\
+At any time, anyone can pick a message in the tree and branch it creating a seperate conversation.  By default conversations are public, but can be made private (think of ways to do this, possibly only your friend group, or your friend groups frined group if they respond)\
+you can add as few people to a private group if you want (even just you or just 1 friend) But anyone can see that a branch was made, and how long it is and sub branches (even if they cant read the notes)\
+you can link to messages on another branch which will connect that branch to this one at that message.\
+There is no following "people" only branches\
+At any time you can explore the graph and see other branches taken\
+branches are weighted by number of people active in them\
+Allow anonomous branches, each person is given a random name and color that is unique and static within that branch\
+Allow fully anonomous branches (anonomous responding to anomonous responding to anonomous)\
+ALL posts and messages must be branched off another mesage\
+branch messages are visible snipets next to current message\
+advertisements must branch off of related messages.  They will be given preferencial visualization BUT making an advertisment creates a new branch that people can comment on
+all branches can be up and down voted to change public visibility.

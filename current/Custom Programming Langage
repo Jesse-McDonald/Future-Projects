@@ -49,6 +49,8 @@ Features
     break(label) and skip(label) must be used IN the named loop
  
   Data structures
+    pointers and refferences are attatched to the type not the variable (ie int* x,y makes 2 int*s not an int* and an int)
+    Arrays use type[] name; notation, not type name[]; notation
     Array's track own length
     Array, String, Variable sized array (internaly vector), and lists all use .length read only property for number of elements.  Also have .size read only property for allocated space.  WHen not applicable .size is same as .length
     JSON added as type

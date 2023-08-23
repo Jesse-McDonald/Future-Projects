@@ -1,0 +1,8 @@
+a redundant NAS for a home server, the nas must support 
+* multiple parody disks for data redundancy on ALL disks
+* hotspares
+* mixed disk sizes
+* partly initilized disks
+* adding new disks to an existing array
+* load balancing data accross all disks
+* if a disk fails, AND the parody fails, only the data stored on THAT DISK is lost

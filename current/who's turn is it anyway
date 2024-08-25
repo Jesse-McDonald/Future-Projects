@@ -1,0 +1,9 @@
+use android (and IOS?) near bluetooth communication to ad-hoc a group playing a game.  when you are done with your turn, hit "next turn" and the next in line gets a notifcation
+
+Pro version features:
+"on deck" notification
+custom server ip
+
+Sub version features
+All Pro features
+Cloud server ping coordination

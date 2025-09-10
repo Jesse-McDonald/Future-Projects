@@ -1,0 +1,7 @@
+its an LLM (Or whatever) you can ask to sing you a song.
+
+When prompted it will identify which song, and then download the lyrics and then tts those.
+
+It also grabs the song its self and auto-tunes the tts to match the song.
+
+Lastly it cadence matches the song.

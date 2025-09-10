@@ -1,0 +1,51 @@
+Terminal (emulator)
+
+The general idea is for a cross platform terminal.  It has full bash support even on windows.  But it is more visaul than a normal terminal.
+If a script is pasted into the terminal rather than run it line by line, it makes a new "script block" which holds the script and allows it to be edited.
+script blocks can be ran and produce output in their block not the main terminal.
+even single commands run in script blocks.
+blocks have a rerun button but will retain their previous results if not reran
+if up arrow, make new block based on previous one, prefix optional, substring optional
+blocks automatically run in the background of the terminal
+blocks can be set to scrollable or non scrollable (per block and global default)
+A better system for variables, escaped symbols, and pipes.
+supports other script languages nativly in script blocks with configurable header
+by default auto imports terminal tools
+blocks support finish notifications
+explorer like interface
+basic api for interactable command outputs
+supports normal copy paste
+command blocks have stop button
+long clicking stop button force stops the tasks like closing the terminal would.  no asking, no stalling, just kill it
+auto detects paths in commands.  if a path appears and exists, puts a thumbnail of the thing next to it.  optionally visually shortens paths
+
+Special commnands
+ssh 
+- forms normal ssh connection with server, but emulates script blocks.  (possibly using screen, or maybe just pipes and files)
+- Ideally only prompt 2fa on koa once
+- Inputs are handled locally until sent
+- Other special commands are extracted and only the appropriate command to get needed data are ran remote
+
+monitor [file]
+- displays the file updating when changed.  Options to scroll to end of file or mantain current line
+
+open [file] 
+- opens the file inferring how from its header.  text goes to edit command, other supported to display
+
+display [file]
+- designed for image and video files
+- embeds image file in terminal
+- plays gifs
+- various scale options (fill width, fill height, scroll, etc)
+
+play [file]
+- video files go to display
+- audio files have a play bar
+
+ils
+- interactive ls, shows explorer like file view including thumbnails, can be list or grid.  
+- can sort by anything post facto
+- clicking a folder navigates into it.  middle clicking opens folder in new block
+- clidking files opens them
+- clicking the path specifically copies it
+

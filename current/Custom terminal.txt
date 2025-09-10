@@ -32,6 +32,15 @@ monitor [file]
 open [file] 
 - opens the file inferring how from its header.  text goes to edit command, other supported to display
 
+edit
+- text editor
+- NORMAL TEXT EDITOR
+- you know, with mouse and arrow keys and just typing
+- and normal copy paste save shortcuts
+- but also syntax highlighting and bracket matching, we arent monsters
+- im not adding (){}"" autocomplete because I have never wanted that anyway, but I am adding tab keyword complete
+- auto detects python with mismatched space vs tab on paste and fixes it.
+
 display [file]
 - designed for image and video files
 - embeds image file in terminal
